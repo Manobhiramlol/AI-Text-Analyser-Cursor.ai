@@ -1,15 +1,18 @@
-# AI Text Analyzer - Cursor.ai Project
+# AI Text Analyzer - Streamlit Application
 ![Project Logo](cursor1.png)
 
 ## Overview
-A powerful text analysis application built with Python and Cursor.ai integration, providing advanced text processing capabilities and AI-powered analysis.
+A powerful text analysis web application built with Streamlit and Python, featuring AI-powered text processing capabilities using Cursor.ai integration.
+
+## Live Demo
+[http://localhost:8501]
 
 ## Project Structure
 ```plaintext
 DEMOAPPCursor/
 ├── backend/
-│   ├── app.py          # Main application logic
-│   ├── main.py         # Entry point
+│   ├── app.py          # Streamlit application
+│   ├── main.py         # Core logic and AI processing
 │   └── requirements.txt # Python dependencies
 ├── cursor1.png         # Project logo/screenshot
 ├── .gitignore         # Git ignore rules
@@ -17,14 +20,15 @@ DEMOAPPCursor/
 ```
 
 ## Features
-- AI-powered text analysis
-- Python backend with robust processing capabilities
-- Modern and efficient implementation
-- [Add your specific features here]
+- 🤖 AI-Powered Text Analysis
+- 📊 Interactive Data Visualization
+- 🎨 Modern Streamlit UI
+- ⚡ Real-time Processing
+- 📱 Responsive Design
 
 ## Prerequisites
 - Python 3.8+
-- Node.js and npm (for frontend dependencies)
+- Streamlit
 - Git
 
 ## Installation
@@ -50,29 +54,76 @@ venv\Scripts\activate
 source venv/bin/activate
 ```
 
-3. Install Python dependencies
+3. Install required packages
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Install Node.js dependencies (if applicable)
-```bash
-npm install
-```
-
 ## Usage
-1. Start the backend server:
+
+1. Run the Streamlit app locally:
 ```bash
 cd backend
-python main.py
+streamlit run app.py
 ```
 
-2. [Add additional usage instructions here]
+2. Open your browser and navigate to:
+```
+http://localhost:8501
+```
+
+## Deployment
+### Deploy to Streamlit Cloud
+1. Push your code to GitHub
+2. Visit [Streamlit Cloud](https://streamlit.io/cloud)
+3. Connect your GitHub repository
+4. Deploy the app
+
+### Deploy using Docker
+```bash
+# Build the Docker image
+docker build -t ai-text-analyzer .
+
+# Run the container
+docker run -p 8501:8501 ai-text-analyzer
+```
 
 ## Development
-- Follow PEP 8 style guide for Python code
-- Use meaningful commit messages
-- Create feature branches for new development
+### Adding New Features
+1. Create a new branch:
+```bash
+git checkout -b feature/new-feature
+```
+
+2. Implement your changes
+3. Test locally using:
+```bash
+streamlit run app.py
+```
+
+4. Create a pull request
+
+### Local Development
+```bash
+# Install development dependencies
+pip install -r requirements-dev.txt
+
+# Run tests
+pytest
+
+# Run linting
+flake8
+```
+
+## Streamlit Components Used
+- `st.title()` - Main application title
+- `st.text_area()` - Text input
+- `st.button()` - Action buttons
+- `st.markdown()` - Rich text display
+- [Add other Streamlit components you've used]
+
+## Screenshots
+![Application Screenshot](cursor1.png)
 
 ## Contributing
 1. Fork the repository
@@ -81,19 +132,29 @@ python main.py
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## Screenshots
-![Application Screenshot](cursor1.png)
+## Common Issues & Solutions
+1. **Streamlit Cache Issues**
+   - Clear cache: `streamlit cache clear`
+   - Restart the Streamlit server
+
+2. **Package Conflicts**
+   - Update requirements: `pip freeze > requirements.txt`
+   - Clean install: `pip install -r requirements.txt --clean`
+
+## Performance Tips
+- Use `@st.cache_data` for data loading
+- Implement pagination for large datasets
+- Optimize image sizes
+- Use async operations for heavy processing
 
 ## Contact
 - Developer: [@Manobhiramlol](https://github.com/Manobhiramlol)
 - Project Link: https://github.com/Manobhiramlol/AI-Text-Analyser-Cursor.ai
 
-## License
-[Choose an appropriate license]
-
 ## Acknowledgments
-- Cursor.ai for providing the AI capabilities
-- Contributors and testers
+- [Streamlit](https://streamlit.io/) for the amazing framework
+- Cursor.ai for AI capabilities
+- All contributors and testers
 
 ---
-Last updated: 2025-06-11 14:50:10 UTC
+Last updated: 2025-06-11 14:58:12 UTC
