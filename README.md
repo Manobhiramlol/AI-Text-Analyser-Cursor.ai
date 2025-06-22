@@ -155,6 +155,6 @@ flake8
 - [Streamlit](https://streamlit.io/) for the amazing framework
 - Cursor.ai for AI capabilities
 - All contributors and testers
-
+- This is An Internship Contributions (POC) @ Blackcoffer
 ---
 Last updated: 2025-06-11 14:58:12 UTC
